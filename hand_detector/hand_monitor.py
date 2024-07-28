@@ -53,8 +53,8 @@ class Record3DSingleHandMotionControl:
                 f"{self.SUPPORT_HAND_MODE} ")
 
         # Camera app
-        self.camera = CameraApp(file=virtual_video_file)
-        # self.camera = RealsenseApp(file=virtual_video_file)
+        # self.camera = CameraApp(file=virtual_video_file)
+        self.camera = RealsenseApp(file=virtual_video_file)
         self.camera.connect_to_device()
         self.camera_mat = self.camera.camera_intrinsics
         self.focal_length = self.camera.camera_intrinsics[0, 0]
